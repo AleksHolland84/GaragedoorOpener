@@ -16,6 +16,9 @@ bool toggle = false;
 
 // setup() runs once, when the device is first turned on.
 void setup() {
+  // Select the u-FL antenna 
+  WiFi.selectAntenna(ANT_EXTERNAL);
+  
   // Put initialization like pinMode and begin functions here.
   pinMode(led, OUTPUT);
   digitalWrite(led, false);
