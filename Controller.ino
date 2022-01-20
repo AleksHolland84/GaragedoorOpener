@@ -8,7 +8,7 @@
 // Setting pins
 
 #define relay D3
-#define MyEvent = "<event/name>"
+#define MyEvent "garage/port"
 
 bool toggle = false;
 
@@ -20,8 +20,8 @@ void setup() {
   WiFi.selectAntenna(ANT_EXTERNAL);
   
   // Put initialization like pinMode and begin functions here.
-  pinMode(led, OUTPUT);
-  digitalWrite(led, false);
+  pinMode(relay, OUTPUT);
+  digitalWrite(relay, false);
   Serial.begin(9600);
   Particle.subscribe(MyEvent, myHandler);
 
